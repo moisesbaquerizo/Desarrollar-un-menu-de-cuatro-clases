@@ -51,8 +51,8 @@ class CalCientifica(Calculadora):
         return area 
     
     def areaCuadrado(self):
-        return self.num2**2 
-        
+        return self.num2**2  
+    
 class Basico:
     def __init__(self):
         pass
