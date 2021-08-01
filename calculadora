@@ -1,0 +1,54 @@
+class Calculadora:
+    def __init__(self, numero1, numero2):
+        self.num1 = numero1
+        self.num2 = numero2
+    
+    def suma(self):
+        return self.num1 + self.num2
+    
+    
+    def resta(self):
+        return self.num1 - self.num2
+    
+    
+    def mutiplicacion(self):
+        return self.num1 * self.num2
+    
+    
+    def division(self):
+        return self.num1 / self.num2
+
+class CalEstandar(Calculadora):
+    def __init__(self, numero1, numero2):
+            super().__init__(numero1,numero2)
+
+
+    def mutiplicacion(self): # aplicar polimorfismo
+        return self.num1 * self.num2   
+    
+    
+    def exponente(self):
+        return self.num1**self.num2
+    
+    def valorAbsoluto(self,numero1):
+        if numero1 <0:
+            numero1 = numero1*-1
+        return numero1
+
+
+class CalCientifica(Calculadora):
+    def __init__(self, numero1, numero2):
+        super().__init__(numero1,numero2)
+    
+    def  circunferencia(self):
+        PI = 3.1416 
+        perimetro = 2* PI*self.num1
+        return perimetro
+    
+    def areaCirculo(self):
+        PI = 3.1416 
+        area = PI*self.num1**2
+        return area 
+    
+    def areaCuadrado(self):
+        return self.num2**2 
